@@ -38,13 +38,10 @@ abstract class BatteryPlatform extends PlatformInterface {
   }
 
   /// Checks the connection status of the device.
-  Future<int> get batteryLevel {
-    throw UnimplementedError('batteryLevel() has not been implemented.');
-  }
+  Future<int> get batteryLevel => _instance.batteryLevel;
 
   /// Returns a Stream of BatteryState changes.
   Stream<BatteryState> get onBatteryStateChanged {
-    throw UnimplementedError(
-        'get onBatteryStateChanged has not been implemented.');
+    return _instance.onBatteryStateChanged;
   }
 }
